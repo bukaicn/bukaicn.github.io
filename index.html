@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星际猎人 · 《斗志昂扬》军团</title>
+    <style>
+        /* 全局重置 & 字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #0b0e1a 0%, #1a1f33 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding: 1.5rem;
+        }
+
+        /* 卡片容器 — 带光感玻璃态 */
+        .card {
+            max-width: 720px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 3rem;
+            padding: 3.5rem 3rem;
+            box-shadow:
+                0 30px 60px -20px rgba(0, 0, 0, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            text-align: center;
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 40px 70px -20px rgba(0, 0, 0, 0.9);
+        }
+
+        /* 装饰小光点 (纯粹氛围) */
+        .glow-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #fbbf24;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #fbbf24aa;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 主文案 */
+        .title {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .title .highlight {
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        .sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.3px;
+            margin-bottom: 2.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding-bottom: 1.5rem;
+        }
+
+        /* 网址区域 — 干净、可复制 */
+        .url-wrapper {
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 2rem;
+            padding: 1.25rem 1.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: background 0.2s;
+            word-break: break-all;
+        }
+
+        .url-wrapper:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .url-label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: rgba(255, 255, 255, 0.25);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .url-link {
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #93bbfc;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+            padding: 0.1rem 0;
+            line-height: 1.5;
+        }
+
+        .url-link:hover {
+            color: #b8d4ff;
+            border-bottom-color: #93bbfc88;
+        }
+
+        .url-link:active {
+            color: #7aa9f0;
+        }
+
+        /* 小尾巴 — 极简版权/提示 */
+        .footer-note {
+            margin-top: 2.2rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.15);
+            letter-spacing: 0.3px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            .card {
+                padding: 2.5rem 1.5rem;
+                border-radius: 2rem;
+            }
+            .title {
+                font-size: 1.8rem;
+            }
+            .url-link {
+                font-size: 1rem;
+            }
+            .url-wrapper {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- 氛围小光点 -->
+        <span class="glow-dot"></span>
+
+        <!-- 主标题 -->
+        <h1 class="title">
+            星际猎人<br />
+            <span class="highlight">《斗志昂扬》军团</span>
+        </h1>
+        <p class="sub">— 官网直达 —</p>
+
+        <!-- 网址卡片 -->
+        <div class="url-wrapper">
+            <span class="url-label">▼ 点击访问</span>
+            <a href="https://www.zhixi.com/view/b25aa962"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="url-link">
+                https://www.zhixi.com/view/b25aa962
+            </a>
+        </div>
+
+        <div class="footer-note">
+            · 星际猎人 · 《斗志昂扬》军团 ·
+        </div>
+    </div>
+
+</body>
+</html>
