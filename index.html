@@ -65,12 +65,19 @@
             margin-bottom: 0.5rem;
         }
 
+        /* 渐变文字 + 去掉下划线（针对链接） */
         .title .highlight {
             background: linear-gradient(135deg, #fcd34d, #f59e0b);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             font-weight: 700;
+            text-decoration: none;          /* 去掉下划线 */
+        }
+
+        /* 可选的悬停效果（视觉反馈） */
+        .title .highlight:hover {
+            filter: brightness(1.1);        /* 微微提亮，表示可点击 */
         }
 
         .sub {
@@ -162,11 +169,17 @@
         <!-- 主标题 -->
         <h1 class="title">
             星际猎人<br />
-            <span class="highlight">《斗志昂扬》军团</span>
+            <!-- 这里改为链接，点击可跳转 -->
+            <a href="https://www.zhixi.com/view/b25aa962"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="highlight">
+                《斗志昂扬》军团
+            </a>
         </h1>
         <p class="sub">— 官网直达 —</p>
 
-        <!-- 网址卡片 -->
+        <!-- 网址卡片（原有链接保留） -->
         <div class="url-wrapper">
             <span class="url-label">▼ 点击访问</span>
             <a href="https://www.zhixi.com/view/b25aa962"
